@@ -1,0 +1,36 @@
+<html>
+	<head th:replace="~{base :: head}"></head>
+	
+	<body>
+	<div th:replace="~{base :: logo}"></div>
+		
+	<nav class="navbar navbar-expand bg-body-tertiary d-flex justify-content-between mb-3">
+				<div class="navbar-nav">		
+					<a class="nav-link" href="/chat"> Chat</a>
+					<a class="nav-link" href="/feedback">Feedback</a>
+					<a class="nav-link" href="/suporte"> <b> Suporte </b></a>
+				</div>
+		</nav> 
+		<div class= "container">
+		<div class="card mb-3" th:each="suporte: ${suportes}">
+		<b><div class="card-header" th:text=${suporte.nomeRequisicaoSup}></div></b>	
+			<div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-8 mb-3">
+			
+							<div>  	
+								<p>	<b>Email: </b><span th:text=${suporte.emailRequisicaoSup}></span></p>			
+							</div>		
+							<div>  	
+								<p>	<b>Solucionado: </b><span th:text=${suporte.solucionado}></span></p>			
+							</div>		
+					
+						</div>
+					</div>
+			</div>
+		</div>
+        </div>
+	
+	
+	</body>
+</html>

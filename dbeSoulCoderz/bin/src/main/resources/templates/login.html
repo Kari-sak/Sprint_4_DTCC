@@ -1,0 +1,34 @@
+<html>
+	<head th:replace="~{base :: head}"></head>
+	
+	<body>
+	<div th:replace="~{base :: logo}"></div>
+		
+	<nav class="navbar navbar-expand bg-body-tertiary d-flex justify-content-between mb-3">
+				<div class="navbar-nav">		
+					<a class="nav-link" href="/usuario/formulario"> <b> Cadastre-se</b></a>
+				</div>
+	</nav>
+				
+	<div class= "container">
+		<div class="card mb-3">
+		<form th:action="@{/login}" method="post" class="card-body">
+			<div class="form-group">
+				<label for="emailUsuario"> Email:</label>
+				<input class="form-control" type="text" name="username" placeholder="Email ">
+			</div>
+			
+			<div class="form-group">
+				<label for="senhaUsuario"> Senha:</label>
+				<input class="form-control" type="password" name="password" placeholder="Senha">			
+			</div>
+			
+			<button class="btn btn-primary mt-3" type="submit">Entrar</button>
+		
+		</form>
+		
+		</div>		
+	</div>
+	
+	</body>
+</html>

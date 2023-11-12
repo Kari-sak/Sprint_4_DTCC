@@ -1,0 +1,54 @@
+<html>
+	<head th:replace="~{base :: head}"></head>
+	
+	<body>
+	<div th:replace="~{base :: logo}"></div>
+		
+	<nav class="navbar navbar-expand bg-body-tertiary d-flex justify-content-between mb-3">
+				<div class="navbar-nav">		
+					<a class="nav-link" href="/login"> <b> Logar</b></a>
+					
+				</div>
+				</nav>
+		
+		<div class= "container">		
+		
+		<div th:replace="~{base :: titulo('Cadastro')}"></div>
+		  <div>
+       		<form class="card-body" action="/usuario/novo" method="post">
+     
+       			<div class="form-group">
+       				<label for="nomeUsuario">Nome</label>
+       				<input class="form-control" name="nomeUsuario">
+       			</div>
+       			
+       			<div class="form-group">
+       				<label for="emailUsuario">Email</label>
+       				<input class="form-control" name="emailUsuario">
+       			</div>
+       			
+       			<div class="form-group">
+       				<label for="senhaUsuario">Senha</label>
+       				<input class="form-control" type=password name="senhaUsuario">
+       			</div>
+       			
+       			<div class="form-group"> 
+       				<label for="telefoneUsuario">Telefone</label>
+       				<input class="form-control" name="telefoneUsuario">
+       			</div>
+       			
+       			<div class="form-group">
+       				<label for="cpfUsuario">CPF</label>
+       				<input class="form-control" name="cpfUsuario">
+       			</div>
+       			
+    			
+       			<button class="btn btn-primary mt-3" type="submit">Cadastrar</button>
+       		</form>
+       		</div>
+       			
+       </div>
+
+	</body>
+</html>
+          	
